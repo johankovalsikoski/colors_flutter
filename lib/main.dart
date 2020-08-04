@@ -110,8 +110,6 @@ class _ColorsHomeState extends State<ColorsHome> {
                       _redSliderValue = _random.nextInt(255);
                       _blueSliderValue = _random.nextInt(255);
                       _greenSliderValue = _random.nextInt(255);
-
-                      _calcColor();
                     }),
                   },
                   child: Text(
