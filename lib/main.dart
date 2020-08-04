@@ -93,7 +93,9 @@ class _ColorsHomeState extends State<ColorsHome> {
               Container(
                 width: double.infinity,
                 height: 200.0,
-                color: _calcColor(),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: _calcColor()),
               ),
               SizedBox(
                 height: 20,
@@ -101,6 +103,7 @@ class _ColorsHomeState extends State<ColorsHome> {
               SizedBox(
                 width: double.infinity,
                 child: OutlineButton(
+                  borderSide: BorderSide(color: _calcColor()),
                   onPressed: () => {
                     setState(() {
                       Random _random = Random();
@@ -111,7 +114,10 @@ class _ColorsHomeState extends State<ColorsHome> {
                       _calcColor();
                     }),
                   },
-                  child: Text("RANDOM"),
+                  child: Text(
+                    "RANDOM",
+                    style: TextStyle(color: _calcColor()),
+                  ),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
                 ),
